@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #da87eb;
+  font-family: Arial, sans-serif;
+}
+
+.game-container {
+  width: 800px;
+  height: 500px;
+  background-color: #FFD700;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 50px);
+  background: linear-gradient(to bottom, #00BFFF 0%, #00BFFF 50%, #FFD700 50%, #FFD700 100%);
+}
+
+.character {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.blue-character {
+  background-color: #1E90FF;
+  left: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.pink-character {
+  background-color: #FF69B4;
+  right: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.net {
+  width: 5px;
+  height: 58%;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #FFF;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+}
